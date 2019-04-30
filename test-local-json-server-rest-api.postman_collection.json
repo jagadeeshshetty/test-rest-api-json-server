@@ -1,0 +1,236 @@
+{
+	"info": {
+		"_postman_id": "29f683d4-9277-470b-be04-d5e6716b6440",
+		"name": "test-local-json-server-rest-api",
+		"description": "https://www.udemy.com/testing-using-postman/learn/v4/t/lecture/9497078?start=0\n",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "createUpdateAndDeleteRecord",
+			"item": [
+				{
+					"name": "1. Create a new record.",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 2,\n    \"title\": \"2-json-server\",\n    \"author\": \"2-typicode\"\n}"
+						},
+						"url": {
+							"raw": "http://{{url}}/{{resources}}",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{resources}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2. Verify record data.",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "460512df-f3fc-4b93-ae04-d620062878a9",
+								"exec": [
+									"",
+									"tests[\"Verify status code\"] = responseCode.code === 200;",
+									"",
+									"tests[\"Verify response body\"] = responseBody.has(\"2-json-server\");",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://{{url}}/{{resources}}/2",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{resources}}",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "3. Update the record.",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 2,\n    \"title\": \"2-json-server-updated\",\n    \"author\": \"2-typicode-updated\"\n}"
+						},
+						"url": {
+							"raw": "http://{{url}}/posts/2",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"posts",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "4. Verify updated record data.",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "460512df-f3fc-4b93-ae04-d620062878a9",
+								"exec": [
+									"",
+									"tests[\"Verify status code\"] = responseCode.code === 200;",
+									"",
+									"tests[\"Verify response body\"] = responseBody.has(\"2-json-server-updated\");",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://{{url}}/posts/2",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"posts",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "5. Delete the record.",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://{{url}}/posts/2",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"posts",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "6. Verify record data.",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "460512df-f3fc-4b93-ae04-d620062878a9",
+								"exec": [
+									"",
+									"tests[\"Verify status code\"] = responseCode.code === 404;",
+									"",
+									"tests[\"Verify response body\"] = responseBody.has(\"{}\");",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://{{url}}/posts/2",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"posts",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "3a0de10f-1adc-49a9-bc4d-8fe5c9a26682",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "3e0eb8b8-b71b-4734-88fa-6f3df591af58",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	]
+}
