@@ -6,7 +6,7 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "newman run tests/test-local-json-server-rest-api.postman_collection.json -e tests/local-json-server-localhost.postman_environment.json --reporters junit --reporter-junit-export newman.xml"
+    "test": "newman run tests/test-local-json-server-rest-api.postman_collection.json -e tests/local-json-server-localhost.postman_environment.json --reporters cli,junit --reporter-junit-export newman.xml"
   },
   "repository": {
     "type": "git",
