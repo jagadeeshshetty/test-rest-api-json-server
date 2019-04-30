@@ -1,0 +1,29 @@
+{
+  "name": "test-rest-api-json-server",
+  "version": "1.0.0",
+  "description": "POC for REST API Test using Postman + Newman + Jenkins pipeline with test execution report.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jagadeeshshetty/test-rest-api-json-server.git"
+  },
+  "keywords": [
+    "restapi",
+    "postman",
+    "jenkins",
+    "test",
+    "automation"
+  ],
+  "author": "Jagadeesh Shetty",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jagadeeshshetty/test-rest-api-json-server/issues"
+  },
+  "homepage": "https://github.com/jagadeeshshetty/test-rest-api-json-server#readme",
+  "dependencies": {
+    "newman": "^4.4.1"
+  }
+}
