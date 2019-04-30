@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="test-local-json-server-rest-api" tests="6" time="0.633">
+  <testsuite name="createUpdateAndDeleteRecord / 1. Create a new record." id="56f4c5c8-84a5-482f-ada9-f16d83222e06" timestamp="2019-04-30T13:47:57.844Z" tests="0" failures="0" errors="0" time="0.587"/>
+  <testsuite name="createUpdateAndDeleteRecord / 2. Verify record data." id="bea371ab-1881-4e82-bf7d-72be4c44d98e" timestamp="2019-04-30T13:47:57.844Z" tests="2" failures="0" errors="0" time="0.012">
+    <testcase name="Verify status code" time="0.012" classname="TestLocalJsonServerRestApi"/>
+    <testcase name="Verify response body" time="0.012" classname="TestLocalJsonServerRestApi"/>
+  </testsuite>
+  <testsuite name="createUpdateAndDeleteRecord / 3. Update the record." id="2cdcb26f-ef12-4567-96ff-67d0b92095c7" timestamp="2019-04-30T13:47:57.844Z" tests="0" failures="0" errors="0" time="0.009"/>
+  <testsuite name="createUpdateAndDeleteRecord / 4. Verify updated record data." id="aa21c17a-562d-4cd1-8f07-def78ebb09be" timestamp="2019-04-30T13:47:57.844Z" tests="2" failures="0" errors="0" time="0.011">
+    <testcase name="Verify status code" time="0.011" classname="TestLocalJsonServerRestApi"/>
+    <testcase name="Verify response body" time="0.011" classname="TestLocalJsonServerRestApi"/>
+  </testsuite>
+  <testsuite name="createUpdateAndDeleteRecord / 5. Delete the record." id="ef505ae5-ccf5-4812-990f-6379d97e5915" timestamp="2019-04-30T13:47:57.844Z" tests="0" failures="0" errors="0" time="0.007"/>
+  <testsuite name="createUpdateAndDeleteRecord / 6. Verify record data." id="089a5714-87f1-4f93-b10f-7c06508d2c9c" timestamp="2019-04-30T13:47:57.844Z" tests="2" failures="0" errors="0" time="0.007">
+    <testcase name="Verify status code" time="0.007" classname="TestLocalJsonServerRestApi"/>
+    <testcase name="Verify response body" time="0.007" classname="TestLocalJsonServerRestApi"/>
+  </testsuite>
+</testsuites>
